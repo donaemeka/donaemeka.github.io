@@ -28,14 +28,16 @@
         header {
             background: linear-gradient(135deg, #2c3e50, #3498db);
             color: white;
-            padding: 4rem 0;
+            padding: 3rem 0;
         }
         
         .profile-header {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 2rem;
-            text-align: left;
+            max-width: 900px;
+            margin: 0 auto;
         }
         
         .profile-photo {
@@ -52,6 +54,7 @@
         
         .profile-text {
             flex: 1;
+            text-align: center;
         }
         
         .profile-text h1 {
@@ -67,9 +70,13 @@
         }
         
         .location {
-            margin-top: 10px;
-            opacity: 0.9;
-        }
+    margin-top: 10px;
+    opacity: 0.9;
+    text-align: left;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
         
         .contact-links {
             margin-top: 1.5rem;
@@ -218,7 +225,7 @@
     <header>
         <div class="container">
             <div class="profile-header">
-                <!-- Photo Section - ADD YOUR PHOTO LATER -->
+                <!-- Photo Section -->
                 <div class="profile-photo">
                     <img src="profile-photo.jpg" alt="Donatus Emeka Photo">
                 </div>
@@ -394,8 +401,8 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Donatus Emeka Anyalebechi. All rights reserved.</p>
-            <p>Open to new DevOps opportunities in Germany | Available Immediately</p>
+            <p>&copy; 2025 Donatus Emeka Anyalebechi. All rights reserved.</p>
+            <p>Open to DevOps opportunities in Germany | Ready to contribute to innovative teams</p>
         </div>
     </footer>
 </body>
