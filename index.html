@@ -7,15 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Analytics -->
-    <!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics ID -->
-   <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-12966704004"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-12966704004');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-12966704004"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-12966704004');
+    </script>
     
     <style>
         * {
@@ -236,7 +234,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #000000; /* Changed to black */
+            color: #000000;
             position: relative;
             padding-bottom: 1rem;
         }
@@ -545,8 +543,7 @@
                         <a href="mailto:donaemeka92@gmail.com"><i class="fas fa-envelope"></i> Email</a>
                         <a href="https://linkedin.com/in/donatus-devops" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                         <a href="https://github.com/donaemeka" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="Donatus_Emeka_Anyalebechi_DevOps_CV.pdf" download><i class="fas fa-download"></i> Download CV</a>
-                        <a href="Donatus_Emeka_Certificates.pdf" target="_blank"><i class="fas fa-certificate"></i> View Certificates</a>
+                        <a href="https://linkedin.com/in/donatus-devops/details/certifications" target="_blank"><i class="fas fa-award"></i> Certifications</a>
                     </div>
                 </div>
             </div>
@@ -754,16 +751,6 @@
         
         // Check on scroll
         window.addEventListener('scroll', fadeInOnScroll);
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
     </script>
 </body>
 </html>
