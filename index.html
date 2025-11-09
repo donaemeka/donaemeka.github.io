@@ -25,29 +25,34 @@
         }
         
         /* Header */
-        header {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .profile-header h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .profile-header h2 {
-            font-size: 1.5rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-            opacity: 0.9;
-        }
-        
-        .contact-links {
-            margin-top: 1.5rem;
-        }
-        
+     <header>
+    <div class="container">
+        <div class="profile-header" style="display: flex; align-items: center; gap: 2rem; text-align: left;">
+            <!-- Photo Section -->
+            <div style="flex-shrink: 0;">
+                <img src="profile-photo.jpg" 
+                     alt="Donatus Emeka Photo" 
+                     style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid white; object-fit: cover;">
+            </div>
+            
+            <!-- Text Section -->
+            <div style="flex: 1;">
+                <h1>Donatus Emeka Anyalebechi</h1>
+                <h2>Junior DevOps Engineer | AWS, Kubernetes, Terraform Specialist</h2>
+                <p>Staatlich geprüfter Informatiker | German State Certified IT Specialist</p>
+                <p style="margin-top: 10px; opacity: 0.9;">📍 Duisburg, Germany</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:donaemeka92@gmail.com">Email</a>
+                    <a href="https://linkedin.com/in/donatus-devops" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/donaemeka" target="_blank">GitHub</a>
+                    <a href="Donatus_Emeka_Anyalebechi_DevOps_CV.pdf" download>Download CV</a>
+                    <a href="Donatus_Emeka_Certificates.pdf" target="_blank">View Certificates</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
         .contact-links a {
             color: white;
             text-decoration: none;
