@@ -13,6 +13,76 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-BT1KYJ66JX');
+        
+        // Enhanced tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track project clicks
+            document.querySelectorAll('.github-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'github_click', {
+                        'event_category': 'engagement',
+                        'event_label': this.href
+                    });
+                });
+            });
+            
+            // Track LinkedIn clicks
+            document.querySelectorAll('a[href*="linkedin"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'linkedin_click', {
+                        'event_category': 'social',
+                        'event_label': 'LinkedIn Profile'
+                    });
+                });
+            });
+            
+            // Track email clicks
+            document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'email_click', {
+                        'event_category': 'contact',
+                        'event_label': 'Email Contact'
+                    });
+                });
+            });
+
+            // Track certification clicks
+            document.querySelectorAll('a[href*="certifications"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'certifications_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'Certifications View'
+                    });
+                });
+            });
+
+            // Track scroll depth (basic)
+            let maxScroll = 0;
+            window.addEventListener('scroll', function() {
+                const currentScroll = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                if (currentScroll > maxScroll) {
+                    maxScroll = currentScroll;
+                    if (currentScroll >= 25 && maxScroll === 25) {
+                        gtag('event', 'scroll_25_percent', {
+                            'event_category': 'engagement',
+                            'event_label': '25% Scroll Depth'
+                        });
+                    }
+                    if (currentScroll >= 50 && maxScroll === 50) {
+                        gtag('event', 'scroll_50_percent', {
+                            'event_category': 'engagement',
+                            'event_label': '50% Scroll Depth'
+                        });
+                    }
+                    if (currentScroll >= 75 && maxScroll === 75) {
+                        gtag('event', 'scroll_75_percent', {
+                            'event_category': 'engagement',
+                            'event_label': '75% Scroll Depth'
+                        });
+                    }
+                }
+            });
+        });
     </script>
     
     <style>
