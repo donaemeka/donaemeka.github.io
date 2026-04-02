@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donatus Emeka - DevOps Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BT1KYJ66JX"></script>
     <script>
@@ -13,10 +13,8 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-BT1KYJ66JX');
-        
-        // Enhanced tracking
+
         document.addEventListener('DOMContentLoaded', function() {
-            // Track project clicks
             document.querySelectorAll('.github-link').forEach(link => {
                 link.addEventListener('click', function() {
                     gtag('event', 'github_click', {
@@ -25,8 +23,7 @@
                     });
                 });
             });
-            
-            // Track LinkedIn clicks
+
             document.querySelectorAll('a[href*="linkedin"]').forEach(link => {
                 link.addEventListener('click', function() {
                     gtag('event', 'linkedin_click', {
@@ -35,8 +32,7 @@
                     });
                 });
             });
-            
-            // Track email clicks
+
             document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
                 link.addEventListener('click', function() {
                     gtag('event', 'email_click', {
@@ -45,53 +41,16 @@
                     });
                 });
             });
-
-            // Track certification clicks
-            document.querySelectorAll('a[href*="certifications"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'certifications_click', {
-                        'event_category': 'engagement',
-                        'event_label': 'Certifications View'
-                    });
-                });
-            });
-
-            // Track scroll depth (basic)
-            let maxScroll = 0;
-            window.addEventListener('scroll', function() {
-                const currentScroll = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                if (currentScroll > maxScroll) {
-                    maxScroll = currentScroll;
-                    if (currentScroll >= 25 && maxScroll === 25) {
-                        gtag('event', 'scroll_25_percent', {
-                            'event_category': 'engagement',
-                            'event_label': '25% Scroll Depth'
-                        });
-                    }
-                    if (currentScroll >= 50 && maxScroll === 50) {
-                        gtag('event', 'scroll_50_percent', {
-                            'event_category': 'engagement',
-                            'event_label': '50% Scroll Depth'
-                        });
-                    }
-                    if (currentScroll >= 75 && maxScroll === 75) {
-                        gtag('event', 'scroll_75_percent', {
-                            'event_category': 'engagement',
-                            'event_label': '75% Scroll Depth'
-                        });
-                    }
-                }
-            });
         });
     </script>
-    
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         :root {
             --primary: #2c3e50;
             --secondary: #3498db;
@@ -101,7 +60,7 @@
             --text: #333;
             --text-light: #777;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -111,7 +70,6 @@
             overflow-x: hidden;
         }
 
-        /* Animated Background Elements */
         .bg-elements {
             position: fixed;
             top: 0;
@@ -125,7 +83,7 @@
         .bg-element {
             position: absolute;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(52, 152, 219, 0.10) 0%, transparent 70%);
             animation: float 20s infinite linear;
         }
 
@@ -162,24 +120,23 @@
         }
 
         @keyframes float {
-            0%, 100% { 
-                transform: translateY(0px) rotate(0deg); 
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
             }
-            33% { 
-                transform: translateY(-30px) rotate(120deg); 
+            33% {
+                transform: translateY(-30px) rotate(120deg);
             }
-            66% { 
-                transform: translateY(20px) rotate(240deg); 
+            66% {
+                transform: translateY(20px) rotate(240deg);
             }
         }
-        
+
         .container {
-            max-width: 1200px;
+            max-width: 1180px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
-        /* Header */
+
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -191,16 +148,13 @@
         header::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.10) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.10) 0%, transparent 50%);
             z-index: 1;
         }
-        
+
         .profile-header {
             display: flex;
             align-items: center;
@@ -211,12 +165,11 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .profile-photo {
             flex-shrink: 0;
-            position: relative;
         }
-        
+
         .profile-photo img {
             width: 150px;
             height: 150px;
@@ -229,31 +182,27 @@
         .profile-photo:hover img {
             transform: scale(1.05);
         }
-        
+
         .profile-text {
             flex: 1;
             text-align: center;
         }
-        
+
         .profile-text h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
-        
+
         .profile-text h2 {
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             font-weight: 300;
-            margin-bottom: 0.5rem;
-            opacity: 0.9;
+            margin-bottom: 0.75rem;
+            opacity: 0.95;
         }
 
-        .profile-text p {
-            margin-bottom: 0.5rem;
-        }
-        
         .location {
-            margin-top: 10px;
+            margin-top: 6px;
             opacity: 0.9;
             text-align: center;
         }
@@ -261,7 +210,7 @@
         .location i {
             margin-right: 5px;
         }
-        
+
         .contact-links {
             margin-top: 1.5rem;
             display: flex;
@@ -269,131 +218,67 @@
             justify-content: center;
             gap: 0.8rem;
         }
-        
+
         .contact-links a {
             color: white;
             text-decoration: none;
-            padding: 0.5rem 1.2rem;
+            padding: 0.55rem 1.2rem;
             border: 1px solid white;
             border-radius: 25px;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
-        
+
         .contact-links a:hover {
             background: white;
             color: var(--primary);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        
-        /* Skills Section */
+
+        .about {
+            padding: 4rem 0 2rem;
+            color: white;
+        }
+
+        .about p {
+            max-width: 820px;
+            margin: 0.8rem auto;
+            line-height: 1.8;
+            text-align: center;
+            font-size: 1.04rem;
+        }
+
         .skills {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.96);
             padding: 4rem 0;
             margin: 2rem 0;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
             backdrop-filter: blur(10px);
         }
-        
-        .skills-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #000000;
-            position: relative;
-            padding-bottom: 1rem;
-        }
 
-        .skills-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
-        }
-        
-        .skill-category {
-            text-align: center;
-            padding: 1.5rem;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            background: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        /* About Section */
-        .about {
-            padding: 4rem 0;
-            color: white;
-        }
-        .about p {
-            max-width: 800px;
-            margin: 0.5rem auto;
-            line-height: 1.7;
-            text-align: center;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .skill-category h3 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 0.8rem;
-            font-size: 1.3rem;
-        }
-        
-        .skill-category ul {
-            list-style: none;
-        }
-        
-        .skill-category li {
-            padding: 0.5rem 0;
-            color: var(--text);
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .skill-category li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-        }
-        
-        /* Projects Section */
-        .projects {
-            padding: 4rem 0;
-        }
-        
+        .skills-title,
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             margin-bottom: 3rem;
-            color: white;
             position: relative;
             padding-bottom: 1rem;
         }
 
+        .skills-title {
+            color: #000;
+        }
+
+        .section-title {
+            color: white;
+        }
+
+        .skills-title::after,
         .section-title::after {
             content: '';
             position: absolute;
@@ -405,18 +290,70 @@
             background: var(--accent);
             border-radius: 2px;
         }
-        
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.45rem 0;
+            color: var(--text);
+            position: relative;
+            padding-left: 1.2rem;
+            text-align: left;
+        }
+
+        .skill-category li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .projects {
+            padding: 4rem 0;
+        }
+
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
         }
-        
+
         .project-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.96);
             border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            padding: 1.8rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
             transition: all 0.3s ease;
             border: 1px solid rgba(255,255,255,0.2);
             backdrop-filter: blur(10px);
@@ -427,41 +364,39 @@
         .project-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+            inset: 0 0 auto 0;
             height: 4px;
             background: linear-gradient(90deg, var(--secondary), var(--accent));
         }
-        
+
         .project-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
-        
+
         .project-card h3 {
             color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
+            margin-bottom: 0.9rem;
+            font-size: 1.3rem;
         }
 
         .project-card p {
             color: var(--text-light);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             line-height: 1.7;
         }
-        
+
         .project-tech {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.7rem;
-            margin: 1.5rem 0;
+            gap: 0.6rem;
+            margin: 1rem 0 1.3rem;
         }
-        
+
         .tech-tag {
             background: #e3f2fd;
             color: #1976d2;
-            padding: 0.4rem 1rem;
+            padding: 0.38rem 0.9rem;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 500;
@@ -473,16 +408,16 @@
             color: white;
             transform: scale(1.05);
         }
-        
+
         .project-links {
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             display: flex;
             gap: 1rem;
         }
-        
+
         .project-links a {
             text-decoration: none;
-            padding: 0.7rem 1.5rem;
+            padding: 0.68rem 1.3rem;
             border-radius: 25px;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -490,7 +425,7 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .github-link {
             background: #333;
             color: white;
@@ -500,18 +435,7 @@
             background: #555;
             transform: translateY(-2px);
         }
-        
-        .demo-link {
-            background: var(--secondary);
-            color: white;
-        }
 
-        .demo-link:hover {
-            background: var(--primary);
-            transform: translateY(-2px);
-        }
-        
-        /* Footer */
         footer {
             background: var(--primary);
             color: white;
@@ -536,10 +460,10 @@
         }
 
         .footer-links {
-            margin-top: 1.5rem;
+            margin-top: 1.3rem;
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 1.2rem;
         }
 
         .footer-links a {
@@ -553,7 +477,6 @@
             transform: translateY(-3px);
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .profile-header {
                 flex-direction: column;
@@ -564,26 +487,26 @@
                 font-size: 2rem;
             }
 
+            .profile-text h2 {
+                font-size: 1rem;
+            }
+
             .contact-links {
                 flex-direction: column;
                 align-items: center;
             }
 
             .contact-links a {
-                width: 200px;
+                width: 220px;
                 justify-content: center;
             }
 
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
+            .projects-grid,
             .skills-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        /* Scroll Animation */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -597,7 +520,6 @@
     </style>
 </head>
 <body>
-    <!-- Animated Background -->
     <div class="bg-elements">
         <div class="bg-element"></div>
         <div class="bg-element"></div>
@@ -605,26 +527,22 @@
         <div class="bg-element"></div>
     </div>
 
-    <!-- Header Section -->
     <header>
         <div class="container">
             <div class="profile-header">
-                <!-- Photo Section -->
                 <div class="profile-photo">
                     <img src="profile-photo.jpg" alt="Donatus Emeka Photo">
                 </div>
-                
-                <!-- Text Section -->
+
                 <div class="profile-text">
                     <h1>Donatus Emeka Anyalebechi</h1>
-                    <h2>DevOps &amp; Cloud Engineer | AWS Certified Solutions Architect – Associate | Staatlich geprüfter Informatiker (DQR 6) | Kubernetes • Terraform • Docker • Linux</h2>
+                    <h2>Junior DevOps &amp; Cloud Engineer | AWS Certified (SAA) | Kubernetes | Terraform | CI/CD | Monitoring</h2>
                     <p class="location"><i class="fas fa-map-marker-alt"></i> Duisburg, Germany</p>
-                    
+
                     <div class="contact-links">
                         <a href="mailto:donaemeka92@gmail.com"><i class="fas fa-envelope"></i> Email</a>
                         <a href="https://linkedin.com/in/donatus-devops" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                         <a href="https://github.com/donaemeka" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://linkedin.com/in/donatus-devops/details/certifications" target="_blank"><i class="fas fa-award"></i> Certifications</a>
                     </div>
                 </div>
             </div>
@@ -632,27 +550,28 @@
     </header>
 
     <div class="container">
-        <!-- About Section -->
         <section class="about fade-in">
-            <h2 class="section-title">About me</h2>
-            <p class="about-text">DevOps &amp; Cloud Engineer and AWS Certified Solutions Architect with a Staatlich geprüfter Informatiker qualification. Specialized in automating AWS EKS environments using Terraform and GitHub Actions, recently cutting deployment times by 40%. With a background in IT Support, I have reduced system downtime by 25% through proactive troubleshooting and monitoring with Prometheus/Grafana. I focus on building reliable, automated pipelines to ensure high availability and efficient cloud operations.</p>
+            <h2 class="section-title">About Me</h2>
+            <p>Junior DevOps &amp; Cloud Engineer with hands-on experience building and automating cloud infrastructure using AWS, Kubernetes, Terraform, and CI/CD pipelines.</p>
+            <p>Deployed production-style applications on AWS EKS and automated deployments with GitHub Actions, reducing manual deployment steps significantly.</p>
+            <p>Experienced in monitoring and troubleshooting systems using Prometheus and Grafana, with a focus on reliability, scalability, and efficient cloud operations.</p>
         </section>
 
-        <!-- Skills Section -->
         <section class="skills fade-in">
             <h2 class="skills-title">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Cloud &<br>Infrastructure as Code</h3>
+                    <h3>Cloud &amp;<br>Infrastructure</h3>
                     <ul>
                         <li>AWS EKS, EC2, S3</li>
-                        <li>Azure Cloud</li>
                         <li>Terraform</li>
                         <li>Ansible</li>
+                        <li>Azure (basic)</li>
                     </ul>
                 </div>
+
                 <div class="skill-category">
-                    <h3>CI/CD &<br>Monitoring</h3>
+                    <h3>CI/CD &amp;<br>Monitoring</h3>
                     <ul>
                         <li>GitHub Actions</li>
                         <li>Prometheus</li>
@@ -660,8 +579,9 @@
                         <li>SonarQube</li>
                     </ul>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Containers &<br>Orchestration</h3>
+                    <h3>Containers &amp;<br>Orchestration</h3>
                     <ul>
                         <li>Docker</li>
                         <li>Kubernetes</li>
@@ -669,10 +589,11 @@
                         <li>Helm</li>
                     </ul>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Scripting &<br>Operating Systems</h3>
+                    <h3>Scripting &amp;<br>Operating Systems</h3>
                     <ul>
-                        <li>Bash Scripting</li>
+                        <li>Bash</li>
                         <li>Python</li>
                         <li>Linux Administration</li>
                         <li>Cron Jobs</li>
@@ -681,52 +602,18 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section class="projects">
             <h2 class="section-title">Featured DevOps Projects</h2>
             <div class="projects-grid">
-                
-                <!-- Project 1 -->
-                <div class="project-card fade-in">
-                    <h3>Expensy - Full DevOps Implementation</h3>
-                    <p>Deployed a complete expense tracking web app to AWS EKS with automated CI/CD pipeline and comprehensive monitoring.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">AWS EKS</span>
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">GitHub Actions</span>
-                        <span class="tech-tag">Prometheus</span>
-                        <span class="tech-tag">Kubernetes</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/donaemeka/Expensy---End-to-End-DevOps-Deployment" class="github-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                    </div>
-                </div>
 
-                <!-- Project 2 -->
-                <div class="project-card fade-in">
-                    <h3>The Monitor - Automated Monitoring System</h3>
-                    <p>Implemented cloud monitoring system with Prometheus/Grafana stack deployed via Docker Compose and Terraform.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Prometheus</span>
-                        <span class="tech-tag">Grafana</span>
-                        <span class="tech-tag">Docker Compose</span>
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">AWS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/donaemeka/The-Monitor-Devops-Project" class="github-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
                 <div class="project-card fade-in">
                     <h3>Real-Time Voting Application on AWS EKS</h3>
-                    <p>Delivered scalable microservices voting app with automated CI/CD and Kubernetes orchestration.</p>
+                    <p>Built and deployed a 3-tier microservices voting application on AWS EKS using Kubernetes and Docker, with CI/CD automation and zero-downtime rolling updates.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Microservices</span>
-                        <span class="tech-tag">CI/CD</span>
                         <span class="tech-tag">AWS EKS</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Terraform</span>
                         <span class="tech-tag">GitHub Actions</span>
                     </div>
                     <div class="project-links">
@@ -734,10 +621,9 @@
                     </div>
                 </div>
 
-                <!-- Project 4 -->
                 <div class="project-card fade-in">
                     <h3>Restauranty - End-to-End DevOps Deployment</h3>
-                    <p>Full-stack restaurant management system with microservices architecture deployed on Kubernetes. Includes CI/CD, monitoring with Prometheus/Grafana, and production-grade infrastructure.</p>
+                    <p>Designed and deployed a full-stack microservices application on Kubernetes with CI/CD, monitoring using Prometheus and Grafana, and secure service communication.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Kubernetes</span>
                         <span class="tech-tag">Microservices</span>
@@ -752,52 +638,49 @@
                     </div>
                 </div>
 
-                <!-- Project 5 -->
                 <div class="project-card fade-in">
-                    <h3>Spring PetClinic - Automated CI/CD Pipeline</h3>
-                    <p>Implemented complete CI/CD workflow for Java Spring application with SonarQube integration and AWS EC2 deployment.</p>
+                    <h3>The Monitor - DevOps Monitoring Stack</h3>
+                    <p>Implemented a monitoring stack with Prometheus, Grafana, Terraform, and Ansible on AWS, using Docker containers to provide observability for a sample application.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">CI/CD</span>
-                        <span class="tech-tag">GitHub Actions</span>
-                        <span class="tech-tag">SonarQube</span>
-                        <span class="tech-tag">AWS EC2</span>
-                        <span class="tech-tag">Java</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/donaemeka/Spring-PetClinic-SonarQube-Project" class="github-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card fade-in">
-                    <h3>Multi-Stack DevOps Automation</h3>
-                    <p>Comprehensive automation project featuring multiple technology stacks and deployment strategies.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Automation</span>
+                        <span class="tech-tag">Prometheus</span>
+                        <span class="tech-tag">Grafana</span>
                         <span class="tech-tag">Terraform</span>
                         <span class="tech-tag">Ansible</span>
                         <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">AWS</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/donaemeka/Multi-Stack-DevOps-Automation" class="github-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                        <a href="https://github.com/donaemeka/The-Monitor-Devops-Project" class="github-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
                     </div>
                 </div>
 
-                <!-- Project 7 -->
                 <div class="project-card fade-in">
-                    <h3>3-Tier App on AWS EC2 with Docker</h3>
-                    <p>Deployed full-stack .NET application with PostgreSQL database on AWS EC2 using Docker containers. Implemented CI/CD pipeline with GitHub Actions for automated deployments.</p>
+                    <h3>AWS Auto-Scaling Web Application</h3>
+                    <p>Built a multi-AZ auto-scaling web application on AWS using Terraform, Application Load Balancer, and EC2, with CloudWatch monitoring for scaling validation.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">AWS EC2</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">.NET Core</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">CI/CD</span>
-                        <span class="tech-tag">Nginx</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">EC2</span>
+                        <span class="tech-tag">ALB</span>
+                        <span class="tech-tag">CloudWatch</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/donaemeka/3Tier-App-Aws-Ec2-Docker" class="github-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                        <a href="https://github.com/donaemeka/aws-auto-scaling-webapp" class="github-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <h3>Java CI/CD Pipeline with SonarQube</h3>
+                    <p>Built a CI/CD pipeline for a Java Spring Boot application with SonarQube quality gates and automated deployment to AWS EC2 using GitHub Actions.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">GitHub Actions</span>
+                        <span class="tech-tag">SonarQube</span>
+                        <span class="tech-tag">AWS EC2</span>
+                        <span class="tech-tag">CI/CD</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/donaemeka/java-ci-cd-sonarqube-pipeline" class="github-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
                     </div>
                 </div>
 
@@ -805,11 +688,10 @@
         </section>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Donatus Emeka Anyalebechi. All rights reserved.</p>
-            <p>Open to DevOps opportunities in Germany | Ready to contribute to innovative teams</p>
+            <p>Open to Junior DevOps &amp; Cloud Engineering opportunities in Germany</p>
             <div class="footer-links">
                 <a href="mailto:donaemeka92@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://linkedin.com/in/donatus-devops" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -819,24 +701,20 @@
     </footer>
 
     <script>
-        // Fade-in animation on scroll
         const fadeElements = document.querySelectorAll('.fade-in');
-        
+
         const fadeInOnScroll = () => {
             fadeElements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
-                
+
                 if (elementTop < window.innerHeight - elementVisible) {
                     element.classList.add('visible');
                 }
             });
         };
-        
-        // Initial check
+
         fadeInOnScroll();
-        
-        // Check on scroll
         window.addEventListener('scroll', fadeInOnScroll);
     </script>
 </body>
