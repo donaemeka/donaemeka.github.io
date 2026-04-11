@@ -7,7 +7,6 @@
     <meta name="description" content="Donatus Emeka Anyalebechi - DevOps & Cloud Engineer specializing in AWS, Kubernetes, Terraform, CI/CD, monitoring, and cloud automation.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BT1KYJ66JX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -59,6 +58,8 @@
             --text: #333;
             --text-light: #777;
             --surface: rgba(255, 255, 255, 0.96);
+            --surface-dark: rgba(255, 255, 255, 0.10);
+            --shadow: 0 10px 30px rgba(0,0,0,0.12);
         }
 
         html {
@@ -154,7 +155,7 @@
             align-items: center;
             justify-content: center;
             gap: 2rem;
-            max-width: 960px;
+            max-width: 980px;
             margin: 0 auto;
             position: relative;
             z-index: 2;
@@ -268,11 +269,27 @@
         }
 
         .about p {
-            max-width: 840px;
+            max-width: 860px;
             margin: 0.8rem auto;
             line-height: 1.8;
             text-align: center;
             font-size: 1.03rem;
+        }
+
+        .availability {
+            margin: 2rem auto 0;
+            max-width: 900px;
+            background: var(--surface-dark);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 14px;
+            padding: 1.2rem 1.4rem;
+            color: white;
+            text-align: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .availability strong {
+            color: #ffffff;
         }
 
         .skills {
@@ -280,7 +297,7 @@
             padding: 4rem 0;
             margin: 2rem 0;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            box-shadow: var(--shadow);
             backdrop-filter: blur(10px);
         }
 
@@ -352,13 +369,12 @@
         .project-card {
             background: var(--surface);
             border-radius: 15px;
-            padding: 1.8rem;
+            overflow: hidden;
             box-shadow: 0 8px 25px rgba(0,0,0,0.12);
             transition: all 0.3s ease;
             border: 1px solid rgba(255,255,255,0.2);
             backdrop-filter: blur(10px);
             position: relative;
-            overflow: hidden;
         }
 
         .project-card::before {
@@ -367,11 +383,30 @@
             inset: 0 0 auto 0;
             height: 4px;
             background: linear-gradient(90deg, var(--secondary), var(--accent));
+            z-index: 2;
         }
 
         .project-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 210px;
+            overflow: hidden;
+            background: #eef5fb;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-content {
+            padding: 1.6rem 1.8rem 1.8rem;
         }
 
         .project-card h3 {
@@ -382,8 +417,18 @@
 
         .project-card p {
             color: var(--text-light);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             line-height: 1.7;
+        }
+
+        .project-highlights {
+            margin: 0.8rem 0 1rem;
+            padding-left: 1rem;
+        }
+
+        .project-highlights li {
+            color: var(--text);
+            margin-bottom: 0.45rem;
         }
 
         .project-tech {
@@ -412,18 +457,20 @@
         .project-links {
             margin-top: 1rem;
             display: flex;
-            gap: 1rem;
+            flex-wrap: wrap;
+            gap: 0.8rem;
         }
 
         .project-links a {
             text-decoration: none;
-            padding: 0.68rem 1.3rem;
+            padding: 0.68rem 1.15rem;
             border-radius: 25px;
             font-weight: 500;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            font-size: 0.92rem;
         }
 
         .github-link {
@@ -433,6 +480,79 @@
 
         .github-link:hover {
             background: #555;
+            transform: translateY(-2px);
+        }
+
+        .details-link {
+            background: #eaf6ff;
+            color: #1669b2;
+            border: 1px solid #cfe9ff;
+        }
+
+        .details-link:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .cta-section {
+            margin: 3rem auto 1rem;
+            max-width: 900px;
+            background: var(--surface);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .cta-section h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.6rem;
+        }
+
+        .cta-section p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 1.2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .cta-buttons a {
+            text-decoration: none;
+            padding: 0.78rem 1.25rem;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-primary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .cta-primary:hover {
+            background: #267fc7;
+            transform: translateY(-2px);
+        }
+
+        .cta-secondary {
+            background: #f1f7fb;
+            color: var(--primary);
+            border: 1px solid #dceaf5;
+        }
+
+        .cta-secondary:hover {
+            background: #dff1ff;
             transform: translateY(-2px);
         }
 
@@ -508,13 +628,17 @@
             }
 
             .contact-links a {
-                width: 220px;
+                width: 240px;
                 justify-content: center;
             }
 
             .projects-grid,
             .skills-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .project-image {
+                height: 200px;
             }
         }
     </style>
@@ -536,7 +660,7 @@
 
                 <div class="profile-text">
                     <h1>Donatus Emeka Anyalebechi</h1>
-                    <h2>DevOps &amp; Cloud Engineer | AWS Certified (SAA) | Kubernetes | Terraform | CI/CD | Monitoring</h2>
+                    <h2>DevOps &amp; Cloud Engineer | AWS Certified Solutions Architect – Associate | Kubernetes | Terraform | CI/CD | Monitoring</h2>
                     <p class="location"><i class="fas fa-map-marker-alt"></i> Duisburg, Germany</p>
 
                     <div class="contact-links">
@@ -553,8 +677,12 @@
         <section class="about fade-in">
             <h2 class="section-title">About Me</h2>
             <p>DevOps &amp; Cloud Engineer with hands-on experience building and automating cloud infrastructure using AWS, Kubernetes, Terraform, and CI/CD pipelines.</p>
-            <p>Deployed production-style applications on AWS EKS, automated delivery with GitHub Actions, and built monitoring-driven systems using Prometheus and Grafana.</p>
-            <p>Focused on reliable deployments, scalable infrastructure, observability, and cloud operations, with a practical background in troubleshooting and systems support.</p>
+            <p>I have deployed production-style applications on AWS EKS, automated delivery with GitHub Actions, and built monitoring solutions with Prometheus and Grafana to improve visibility, reliability, and deployment consistency.</p>
+            <p>My focus is on scalable infrastructure, reliable releases, observability, and cloud operations, supported by a practical background in troubleshooting and systems support.</p>
+
+            <div class="availability">
+                <strong>Open to:</strong> Junior DevOps Engineer, Cloud Engineer, IT Operations, Infrastructure, and Platform Support roles in Germany.
+            </div>
         </section>
 
         <section class="skills fade-in">
@@ -563,7 +691,7 @@
                 <div class="skill-category">
                     <h3>Cloud &amp;<br>Infrastructure</h3>
                     <ul>
-                        <li>AWS EKS, EC2, S3</li>
+                        <li>AWS (EKS, EC2, S3, VPC)</li>
                         <li>Terraform</li>
                         <li>Ansible</li>
                         <li>Azure (basic)</li>
@@ -591,7 +719,7 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3>Scripting &amp;<br>Operating Systems</h3>
+                    <h3>Scripting &amp;<br>Systems</h3>
                     <ul>
                         <li>Bash</li>
                         <li>Python</li>
@@ -605,120 +733,174 @@
         <section class="projects">
             <h2 class="section-title">Featured DevOps Projects</h2>
             <p class="projects-intro">
-                A selection of cloud and DevOps projects covering Kubernetes, CI/CD, monitoring, infrastructure automation, and high-availability systems.
+                A focused selection of DevOps and cloud projects covering Kubernetes, CI/CD, monitoring, infrastructure automation, and high-availability system design.
             </p>
 
             <div class="projects-grid">
                 <div class="project-card fade-in">
-                    <h3>Expensy — DevOps Deployment on AWS EKS</h3>
-                    <p>Designed and deployed a full-stack expense tracking application on AWS EKS using Kubernetes, Docker, and GitHub Actions. Implemented CI/CD automation, secure configuration with Kubernetes Secrets, and real-time monitoring using Prometheus and Grafana.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">AWS EKS</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">GitHub Actions</span>
-                        <span class="tech-tag">Prometheus</span>
-                        <span class="tech-tag">Grafana</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Redis</span>
+                    <div class="project-image">
+                        <img src="expensy-devops-eks-deployment/docs/images/architecture.png" alt="Expensy architecture diagram">
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/donaemeka/expensy-devops-eks-deployment" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <h3>Real-Time Voting Application on AWS EKS</h3>
-                    <p>Built and deployed a 3-tier microservices voting application on AWS EKS using Kubernetes and Docker, with CI/CD automation and zero-downtime rolling updates.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">AWS EKS</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">GitHub Actions</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/donaemeka/Real-Time-Voting-Application-on-AWS-EKS" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                    <div class="project-content">
+                        <h3>Expensy — DevOps Deployment on AWS EKS</h3>
+                        <p>Designed and deployed a full-stack expense tracking application on AWS EKS using Kubernetes, Docker, and GitHub Actions. Added secure configuration with Kubernetes Secrets and real-time observability with Prometheus and Grafana.</p>
+                        <ul class="project-highlights">
+                            <li>Containerized and deployed a production-style application on AWS EKS.</li>
+                            <li>Integrated monitoring and automated delivery for more reliable releases.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS EKS</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka/expensy-devops-eks-deployment" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka/expensy-devops-eks-deployment#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-card fade-in">
-                    <h3>Restauranty - End-to-End DevOps Deployment</h3>
-                    <p>Designed and deployed a full-stack microservices application on Kubernetes with CI/CD, monitoring using Prometheus and Grafana, and secure service communication.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Microservices</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">GitHub Actions</span>
-                        <span class="tech-tag">Prometheus</span>
-                        <span class="tech-tag">Grafana</span>
-                        <span class="tech-tag">MongoDB</span>
+                    <div class="project-image">
+                        <img src="Real-Time-Voting-Application-on-AWS-EKS/screenshots/architecture.png" alt="Real-time voting app architecture">
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/donaemeka/Restauranty-Devops-End-To-End-Deployment" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <h3>The Monitor - DevOps Monitoring Stack</h3>
-                    <p>Implemented a monitoring stack with Prometheus, Grafana, Terraform, and Ansible on AWS, using Docker containers to provide observability for a sample application.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Prometheus</span>
-                        <span class="tech-tag">Grafana</span>
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">Ansible</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">AWS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/donaemeka/The-Monitor-Devops-Project" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                    <div class="project-content">
+                        <h3>Real-Time Voting Application on AWS EKS</h3>
+                        <p>Built and deployed a 3-tier microservices voting application on AWS EKS using Kubernetes and Docker. Implemented CI/CD automation and rolling updates to support reliable delivery with minimal downtime.</p>
+                        <ul class="project-highlights">
+                            <li>Deployed multiple services with Kubernetes on Amazon EKS.</li>
+                            <li>Improved deployment consistency through GitHub Actions automation.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS EKS</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka/Real-Time-Voting-Application-on-AWS-EKS" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka/Real-Time-Voting-Application-on-AWS-EKS#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-card fade-in">
-                    <h3>AWS Auto-Scaling Web Application</h3>
-                    <p>Built a multi-AZ auto-scaling web application on AWS using Terraform, Application Load Balancer, and EC2, with CloudWatch monitoring for scaling validation.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">EC2</span>
-                        <span class="tech-tag">ALB</span>
-                        <span class="tech-tag">CloudWatch</span>
+                    <div class="project-image">
+                        <img src="Restauranty-Devops-End-To-End-Deployment/screenshots/architecture.png" alt="Restauranty architecture diagram">
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/donaemeka/aws-auto-scaling-webapp" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <h3>Java CI/CD Pipeline with SonarQube</h3>
-                    <p>Built a CI/CD pipeline for a Java Spring Boot application with SonarQube quality gates and automated deployment to AWS EC2 using GitHub Actions.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">GitHub Actions</span>
-                        <span class="tech-tag">SonarQube</span>
-                        <span class="tech-tag">AWS EC2</span>
-                        <span class="tech-tag">CI/CD</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/donaemeka/java-ci-cd-sonarqube-pipeline" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                    <div class="project-content">
+                        <h3>Restauranty — End-to-End DevOps Deployment</h3>
+                        <p>Designed and deployed a microservices-based application on Kubernetes with Docker, CI/CD automation, and monitoring using Prometheus and Grafana for improved system visibility.</p>
+                        <ul class="project-highlights">
+                            <li>Combined deployment automation, containerization, and observability in one workflow.</li>
+                            <li>Showcased practical DevOps practices across application delivery and operations.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Microservices</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka/Restauranty-Devops-End-To-End-Deployment" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka/Restauranty-Devops-End-To-End-Deployment#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-card fade-in">
-                    <h3>Kubernetes HA Cluster on AWS</h3>
-                    <p>Set up a high-availability Kubernetes cluster using k3s on AWS EC2 with a multi-node configuration for resilient service deployment and cluster management.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">k3s</span>
-                        <span class="tech-tag">AWS EC2</span>
-                        <span class="tech-tag">High Availability</span>
-                        <span class="tech-tag">Linux</span>
+                    <div class="project-image">
+                        <img src="The-Monitor-Devops-Project/images/1-architecture-diagram.png" alt="Monitoring stack architecture">
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/donaemeka/kubernetes-ha-cluster" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                    <div class="project-content">
+                        <h3>The Monitor — DevOps Monitoring Stack</h3>
+                        <p>Implemented a monitoring stack with Prometheus, Grafana, Terraform, and Ansible on AWS, using Docker containers to provide real-time observability for a sample application environment.</p>
+                        <ul class="project-highlights">
+                            <li>Automated infrastructure provisioning and configuration for repeatable setup.</li>
+                            <li>Built dashboards to improve visibility into system and service performance.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Ansible</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka/The-Monitor-Devops-Project" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka/The-Monitor-Devops-Project#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
                     </div>
                 </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="aws_auto_scaling_project/screenshots/1-architecture-diagram.jpeg" alt="AWS auto scaling architecture diagram">
+                    </div>
+                    <div class="project-content">
+                        <h3>AWS Auto-Scaling Web Application</h3>
+                        <p>Built a multi-AZ auto-scaling web application on AWS using Terraform, an Application Load Balancer, EC2, and CloudWatch to validate dynamic scaling behavior under load.</p>
+                        <ul class="project-highlights">
+                            <li>Created a highly available infrastructure design across multiple Availability Zones.</li>
+                            <li>Validated scale-out and scale-in behavior using monitoring and stress testing.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">EC2</span>
+                            <span class="tech-tag">ALB</span>
+                            <span class="tech-tag">CloudWatch</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka/aws-auto-scaling-webapp" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka/aws-auto-scaling-webapp#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="java-ci-cd-sonarqube-pipeline/images/architecture.png" alt="Java CI/CD pipeline architecture">
+                    </div>
+                    <div class="project-content">
+                        <h3>Java CI/CD Pipeline with SonarQube</h3>
+                        <p>Built a CI/CD pipeline for a Java Spring Boot application using GitHub Actions and SonarQube, with automated deployment to AWS EC2 and integrated code quality checks.</p>
+                        <ul class="project-highlights">
+                            <li>Combined quality gates and deployment automation in one pipeline.</li>
+                            <li>Improved release consistency through repeatable CI/CD workflows.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">SonarQube</span>
+                            <span class="tech-tag">AWS EC2</span>
+                            <span class="tech-tag">CI/CD</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka/java-ci-cd-sonarqube-pipeline" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka/java-ci-cd-sonarqube-pipeline#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section fade-in">
+            <h3>Let’s Connect</h3>
+            <p>I am open to junior DevOps, cloud, IT operations, and infrastructure-focused roles where I can contribute to reliable deployments, automation, and system improvement.</p>
+            <div class="cta-buttons">
+                <a href="mailto:donaemeka92@gmail.com" class="cta-primary"><i class="fas fa-envelope"></i> Contact Me</a>
+                <a href="https://linkedin.com/in/donatus-devops" class="cta-secondary" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
             </div>
         </section>
     </div>
@@ -726,7 +908,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Donatus Emeka Anyalebechi. All rights reserved.</p>
-            <p>Open to DevOps &amp; Cloud Engineering opportunities in Germany</p>
+            <p>Open to DevOps, Cloud Engineering, IT Operations, and Infrastructure roles in Germany.</p>
             <div class="footer-links">
                 <a href="mailto:donaemeka92@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://linkedin.com/in/donatus-devops" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
