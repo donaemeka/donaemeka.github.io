@@ -1,942 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donatus Emeka - DevOps & Cloud Engineer</title>
-    <meta name="description" content="Donatus Emeka Anyalebechi - DevOps & Cloud Engineer specializing in AWS, Kubernetes, Terraform, CI/CD, monitoring, and cloud automation.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BT1KYJ66JX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-BT1KYJ66JX');
-
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.github-link').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'github_click', {
-                        event_category: 'engagement',
-                        event_label: this.href
-                    });
-                });
-            });
-
-            document.querySelectorAll('a[href*="linkedin"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'linkedin_click', {
-                        event_category: 'social',
-                        event_label: 'LinkedIn Profile'
-                    });
-                });
-            });
-
-            document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'email_click', {
-                        event_category: 'contact',
-                        event_label: 'Email Contact'
-                    });
-                });
-            });
-        });
-    </script>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #1abc9c;
-            --text: #333;
-            --text-light: #777;
-            --surface: rgba(255, 255, 255, 0.96);
-            --surface-dark: rgba(255, 255, 255, 0.10);
-            --shadow: 0 10px 30px rgba(0,0,0,0.12);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: linear-gradient(135deg, #0a192f 0%, #1a365d 100%);
-            overflow-x: hidden;
-        }
-
-        .bg-elements {
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .bg-element {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(52, 152, 219, 0.10) 0%, transparent 70%);
-            animation: float 20s infinite linear;
-        }
-
-        .bg-element:nth-child(1) {
-            width: 300px;
-            height: 300px;
-            top: 10%;
-            left: 5%;
-            animation-delay: 0s;
-        }
-
-        .bg-element:nth-child(2) {
-            width: 200px;
-            height: 200px;
-            top: 60%;
-            right: 10%;
-            animation-delay: -5s;
-        }
-
-        .bg-element:nth-child(3) {
-            width: 150px;
-            height: 150px;
-            bottom: 20%;
-            left: 20%;
-            animation-delay: -10s;
-        }
-
-        .bg-element:nth-child(4) {
-            width: 250px;
-            height: 250px;
-            top: 30%;
-            right: 20%;
-            animation-delay: -15s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-30px) rotate(120deg); }
-            66% { transform: translateY(20px) rotate(240deg); }
-        }
-
-        .container {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 3rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.10) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.10) 0%, transparent 50%);
-            z-index: 1;
-        }
-
-        .profile-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            max-width: 980px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .profile-photo {
-            flex-shrink: 0;
-        }
-
-        .profile-photo img {
-            width: 155px;
-            height: 155px;
-            border-radius: 50%;
-            border: 4px solid white;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .profile-photo:hover img {
-            transform: scale(1.04);
-        }
-
-        .profile-text {
-            flex: 1;
-            text-align: center;
-        }
-
-        .profile-text h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-        }
-
-        .profile-text h2 {
-            font-size: 1.12rem;
-            font-weight: 300;
-            margin-bottom: 0.9rem;
-            opacity: 0.96;
-        }
-
-        .location {
-            opacity: 0.92;
-            margin-bottom: 0.2rem;
-        }
-
-        .location i {
-            margin-right: 6px;
-        }
-
-        .contact-links {
-            margin-top: 1.4rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.8rem;
-        }
-
-        .contact-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.55rem 1.2rem;
-            border: 1px solid white;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .contact-links a:hover {
-            background: white;
-            color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .section-title,
-        .skills-title {
-            text-align: center;
-            font-size: 2.3rem;
-            margin-bottom: 2.8rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .section-title {
-            color: white;
-        }
-
-        .skills-title {
-            color: #111;
-        }
-
-        .section-title::after,
-        .skills-title::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-
-        .about {
-            padding: 4rem 0 2rem;
-            color: white;
-        }
-
-        .about p {
-            max-width: 860px;
-            margin: 0.8rem auto;
-            line-height: 1.8;
-            text-align: center;
-            font-size: 1.03rem;
-        }
-
-        .availability {
-            margin: 2rem auto 0;
-            max-width: 900px;
-            background: var(--surface-dark);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 14px;
-            padding: 1.2rem 1.4rem;
-            color: white;
-            text-align: center;
-            backdrop-filter: blur(8px);
-        }
-
-        .availability strong {
-            color: #ffffff;
-        }
-
-        .skills {
-            background: var(--surface);
-            padding: 4rem 0;
-            margin: 2rem 0;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            backdrop-filter: blur(10px);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .skill-category {
-            text-align: center;
-            padding: 1.5rem;
-            border-radius: 12px;
-            transition: transform 0.3s ease;
-            background: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .skill-category h3 {
-            color: var(--primary);
-            margin-bottom: 1.2rem;
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 0.8rem;
-            font-size: 1.2rem;
-        }
-
-        .skill-category ul {
-            list-style: none;
-        }
-
-        .skill-category li {
-            padding: 0.45rem 0 0.45rem 1.2rem;
-            color: var(--text);
-            position: relative;
-            text-align: left;
-        }
-
-        .skill-category li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-        }
-
-        .projects {
-            padding: 4rem 0;
-        }
-
-        .projects-intro {
-            max-width: 850px;
-            margin: -1.3rem auto 2.5rem;
-            text-align: center;
-            color: rgba(255,255,255,0.92);
-            line-height: 1.8;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--surface);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            position: relative;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            inset: 0 0 auto 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--secondary), var(--accent));
-            z-index: 2;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 260px;
-            overflow: hidden;
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-        }
-
-        .project-content {
-            padding: 1.6rem 1.8rem 1.8rem;
-        }
-
-        .project-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.9rem;
-            font-size: 1.28rem;
-        }
-
-        .project-card p {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-
-        .project-highlights {
-            margin: 0.8rem 0 1rem;
-            padding-left: 1rem;
-        }
-
-        .project-highlights li {
-            color: var(--text);
-            margin-bottom: 0.45rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            margin: 1rem 0 1.2rem;
-        }
-
-        .tech-tag {
-            background: #e3f2fd;
-            color: #1976d2;
-            padding: 0.38rem 0.9rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .tech-tag:hover {
-            background: var(--secondary);
-            color: white;
-            transform: scale(1.05);
-        }
-
-        .project-links {
-            margin-top: 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .project-links a {
-            text-decoration: none;
-            padding: 0.68rem 1.15rem;
-            border-radius: 25px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.92rem;
-        }
-
-        .github-link {
-            background: #333;
-            color: white;
-        }
-
-        .github-link:hover {
-            background: #555;
-            transform: translateY(-2px);
-        }
-
-        .details-link {
-            background: #eaf6ff;
-            color: #1669b2;
-            border: 1px solid #cfe9ff;
-        }
-
-        .details-link:hover {
-            background: var(--secondary);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .cta-section {
-            margin: 3rem auto 1rem;
-            max-width: 900px;
-            background: var(--surface);
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: var(--shadow);
-        }
-
-        .cta-section h3 {
-            color: var(--primary);
-            margin-bottom: 0.8rem;
-            font-size: 1.6rem;
-        }
-
-        .cta-section p {
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto 1.2rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.8rem;
-        }
-
-        .cta-buttons a {
-            text-decoration: none;
-            padding: 0.78rem 1.25rem;
-            border-radius: 25px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .cta-primary {
-            background: var(--secondary);
-            color: white;
-        }
-
-        .cta-primary:hover {
-            background: #267fc7;
-            transform: translateY(-2px);
-        }
-
-        .cta-secondary {
-            background: #f1f7fb;
-            color: var(--primary);
-            border: 1px solid #dceaf5;
-        }
-
-        .cta-secondary:hover {
-            background: #dff1ff;
-            transform: translateY(-2px);
-        }
-
-        footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 3rem 0;
-            margin-top: 4rem;
-            position: relative;
-        }
-
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--secondary), var(--accent));
-        }
-
-        footer p {
-            margin-bottom: 0.45rem;
-        }
-
-        .footer-links {
-            margin-top: 1.2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1.2rem;
-        }
-
-        .footer-links a {
-            color: white;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-            transform: translateY(-3px);
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @media (max-width: 768px) {
-            .profile-header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .profile-text h1 {
-                font-size: 2rem;
-            }
-
-            .profile-text h2 {
-                font-size: 1rem;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contact-links a {
-                width: 240px;
-                justify-content: center;
-            }
-
-            .projects-grid,
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-image {
-                height: 220px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donatus Emeka - DevOps & Cloud Engineer</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== ANIMATED BACKGROUND ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background: linear-gradient(-45deg, #0a192f, #1a365d, #2c3e50, #1abc9c);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+header img {
+    width: 130px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 2.3rem;
+}
+
+header p {
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* ===== CONTACT ===== */
+.links {
+    margin-top: 15px;
+}
+
+.links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    background: white;
+    color: #0a192f;
+}
+
+/* ===== SECTION ===== */
+.section {
+    margin: 40px 0;
+    color: white;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== PROJECT IMAGE ===== */
+.project-img {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 10px;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ===== TAGS ===== */
+.tags span {
+    background: #3498db;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: white;
+    opacity: 0.8;
+}
+</style>
 </head>
+
 <body>
-    <div class="bg-elements">
-        <div class="bg-element"></div>
-        <div class="bg-element"></div>
-        <div class="bg-element"></div>
-        <div class="bg-element"></div>
+
+<header>
+    <img src="profile-photo1.jpeg">
+    <h1>Donatus Emeka Anyalebechi</h1>
+    <p>DevOps & Cloud Engineer | AWS | Kubernetes | Terraform | CI/CD</p>
+
+    <div class="links">
+        <a href="mailto:donaemeka92@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/donatus-devops">LinkedIn</a>
+        <a href="https://github.com/donaemeka">GitHub</a>
     </div>
+</header>
 
-    <header>
-        <div class="container">
-            <div class="profile-header">
-                <div class="profile-photo">
-                    <img src="profile-photo1.jpeg" alt="Donatus Emeka Photo">
-                </div>
+<div class="container">
 
-                <div class="profile-text">
-                    <h1>Donatus Emeka Anyalebechi</h1>
-                    <h2>DevOps &amp; Cloud Engineer | AWS Certified Solutions Architect – Associate | Kubernetes | Terraform | CI/CD | Monitoring</h2>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Duisburg, Germany</p>
+<div class="section">
+<h2>About Me</h2>
+<p style="text-align:center">
+DevOps & Cloud Engineer with hands-on experience building scalable cloud systems using AWS, Kubernetes, Terraform, and CI/CD pipelines.
+</p>
+</div>
 
-                    <div class="contact-links">
-                        <a href="mailto:donaemeka92@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                        <a href="https://linkedin.com/in/donatus-devops" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="https://github.com/donaemeka" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+<div class="section">
+<h2>Projects</h2>
 
-    <div class="container">
-        <section class="about fade-in">
-            <h2 class="section-title">About Me</h2>
-            <p>DevOps &amp; Cloud Engineer with hands-on experience building and automating cloud infrastructure using AWS, Kubernetes, Terraform, and CI/CD pipelines.</p>
-            <p>I have deployed production-style applications on AWS EKS, automated delivery with GitHub Actions, and built monitoring solutions with Prometheus and Grafana to improve visibility, reliability, and deployment consistency.</p>
-            <p>My focus is on scalable infrastructure, reliable releases, observability, and cloud operations, supported by a practical background in troubleshooting and systems support.</p>
+<!-- EXPENSY -->
+<div class="card">
+<div class="project-img">
+<img src="images/projects/expensy-architecture.png">
+</div>
+<h3>Expensy - AWS EKS Deployment</h3>
+<p>Full-stack application deployed on AWS EKS with CI/CD, monitoring, and secure configuration.</p>
+<div class="tags">
+<span>AWS</span><span>Kubernetes</span><span>Docker</span><span>CI/CD</span>
+</div>
+<a class="btn" href="https://github.com/donaemeka/expensy-devops-eks-deployment">View Code</a>
+</div>
 
-            <div class="availability">
-                <strong>Open to:</strong> Junior DevOps Engineer, Cloud Engineer, IT Operations, Infrastructure, and Platform Support roles in Germany.
-            </div>
-        </section>
+<!-- VOTING -->
+<div class="card">
+<div class="project-img">
+<img src="images/projects/voting-architecture.png">
+</div>
+<h3>Real-Time Voting App</h3>
+<p>3-tier microservices app deployed on AWS EKS with automated deployments.</p>
+<div class="tags">
+<span>AWS</span><span>Kubernetes</span><span>Terraform</span>
+</div>
+<a class="btn" href="https://github.com/donaemeka/Real-Time-Voting-Application-on-AWS-EKS">View Code</a>
+</div>
 
-        <section class="skills fade-in">
-            <h2 class="skills-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Cloud &amp;<br>Infrastructure</h3>
-                    <ul>
-                        <li>AWS (EKS, EC2, S3, VPC)</li>
-                        <li>Terraform</li>
-                        <li>Ansible</li>
-                        <li>Azure (basic)</li>
-                    </ul>
-                </div>
+<!-- RESTAURANTY -->
+<div class="card">
+<div class="project-img">
+<img src="images/projects/restauranty-architecture.png">
+</div>
+<h3>Restauranty DevOps Project</h3>
+<p>End-to-end DevOps deployment with Kubernetes, CI/CD, and monitoring.</p>
+<div class="tags">
+<span>Kubernetes</span><span>Docker</span><span>Monitoring</span>
+</div>
+<a class="btn" href="https://github.com/donaemeka/Restauranty-Devops-End-To-End-Deployment">View Code</a>
+</div>
 
-                <div class="skill-category">
-                    <h3>CI/CD &amp;<br>Monitoring</h3>
-                    <ul>
-                        <li>GitHub Actions</li>
-                        <li>Prometheus</li>
-                        <li>Grafana</li>
-                        <li>SonarQube</li>
-                    </ul>
-                </div>
+<!-- MONITOR -->
+<div class="card">
+<div class="project-img">
+<img src="images/projects/monitor-architecture.png">
+</div>
+<h3>Monitoring Stack</h3>
+<p>Prometheus and Grafana monitoring deployed using Terraform and Ansible.</p>
+<div class="tags">
+<span>Prometheus</span><span>Grafana</span><span>Terraform</span>
+</div>
+<a class="btn" href="https://github.com/donaemeka/The-Monitor-Devops-Project">View Code</a>
+</div>
 
-                <div class="skill-category">
-                    <h3>Containers &amp;<br>Orchestration</h3>
-                    <ul>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>Docker Compose</li>
-                        <li>Helm</li>
-                    </ul>
-                </div>
+<!-- AUTO SCALING -->
+<div class="card">
+<div class="project-img">
+<img src="images/projects/autoscaling-architecture.jpeg">
+</div>
+<h3>AWS Auto Scaling App</h3>
+<p>Multi-AZ infrastructure with load balancing and auto scaling.</p>
+<div class="tags">
+<span>AWS</span><span>EC2</span><span>ALB</span>
+</div>
+<a class="btn" href="https://github.com/donaemeka/aws-auto-scaling-webapp">View Code</a>
+</div>
 
-                <div class="skill-category">
-                    <h3>Scripting &amp;<br>Systems</h3>
-                    <ul>
-                        <li>Bash</li>
-                        <li>Python</li>
-                        <li>Linux Administration</li>
-                        <li>Cron Jobs</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+<!-- JAVA -->
+<div class="card">
+<div class="project-img">
+<img src="images/projects/java-cicd-architecture.png">
+</div>
+<h3>Java CI/CD Pipeline</h3>
+<p>CI/CD pipeline with GitHub Actions and SonarQube deployed on AWS.</p>
+<div class="tags">
+<span>Java</span><span>CI/CD</span><span>SonarQube</span>
+</div>
+<a class="btn" href="https://github.com/donaemeka/java-ci-cd-sonarqube-pipeline">View Code</a>
+</div>
 
-        <section class="projects">
-            <h2 class="section-title">Featured DevOps Projects</h2>
-            <p class="projects-intro">
-                A focused selection of DevOps and cloud projects covering Kubernetes, CI/CD, monitoring, infrastructure automation, and high-availability system design.
-            </p>
+</div>
 
-            <div class="projects-grid">
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="images/projects/expensy-architecture.png" alt="Expensy architecture diagram">
-                    </div>
-                    <div class="project-content">
-                        <h3>Expensy — DevOps Deployment on AWS EKS</h3>
-                        <p>Designed and deployed a full-stack expense tracking application on AWS EKS using Kubernetes, Docker, and GitHub Actions. Added secure configuration with Kubernetes Secrets and real-time observability with Prometheus and Grafana.</p>
-                        <ul class="project-highlights">
-                            <li>Containerized and deployed a production-style application on AWS EKS.</li>
-                            <li>Integrated monitoring and automated delivery for more reliable releases.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">AWS EKS</span>
-                            <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">GitHub Actions</span>
-                            <span class="tech-tag">Prometheus</span>
-                            <span class="tech-tag">Grafana</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Redis</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/donaemeka/expensy-devops-eks-deployment" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
-                            <a href="https://github.com/donaemeka/expensy-devops-eks-deployment#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
-                        </div>
-                    </div>
-                </div>
+</div>
 
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="images/projects/voting-architecture.png" alt="Real-time voting app architecture">
-                    </div>
-                    <div class="project-content">
-                        <h3>Real-Time Voting Application on AWS EKS</h3>
-                        <p>Built and deployed a 3-tier microservices voting application on AWS EKS using Kubernetes and Docker. Implemented CI/CD automation and rolling updates to support reliable delivery with minimal downtime.</p>
-                        <ul class="project-highlights">
-                            <li>Deployed multiple services with Kubernetes on Amazon EKS.</li>
-                            <li>Improved deployment consistency through GitHub Actions automation.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">AWS EKS</span>
-                            <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Terraform</span>
-                            <span class="tech-tag">GitHub Actions</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/donaemeka/Real-Time-Voting-Application-on-AWS-EKS" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
-                            <a href="https://github.com/donaemeka/Real-Time-Voting-Application-on-AWS-EKS#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
-                        </div>
-                    </div>
-                </div>
+<footer>
+<p>© 2025 Donatus Emeka Anyalebechi</p>
+</footer>
 
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="images/projects/restauranty-architecture.png" alt="Restauranty architecture diagram">
-                    </div>
-                    <div class="project-content">
-                        <h3>Restauranty — End-to-End DevOps Deployment</h3>
-                        <p>Designed and deployed a microservices-based application on Kubernetes with Docker, CI/CD automation, and monitoring using Prometheus and Grafana for improved system visibility.</p>
-                        <ul class="project-highlights">
-                            <li>Combined deployment automation, containerization, and observability in one workflow.</li>
-                            <li>Showcased practical DevOps practices across application delivery and operations.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">Microservices</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">GitHub Actions</span>
-                            <span class="tech-tag">Prometheus</span>
-                            <span class="tech-tag">Grafana</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/donaemeka/Restauranty-Devops-End-To-End-Deployment" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
-                            <a href="https://github.com/donaemeka/Restauranty-Devops-End-To-End-Deployment#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="images/projects/monitor-architecture.png" alt="Monitoring stack architecture">
-                    </div>
-                    <div class="project-content">
-                        <h3>The Monitor — DevOps Monitoring Stack</h3>
-                        <p>Implemented a monitoring stack with Prometheus, Grafana, Terraform, and Ansible on AWS, using Docker containers to provide real-time observability for a sample application environment.</p>
-                        <ul class="project-highlights">
-                            <li>Automated infrastructure provisioning and configuration for repeatable setup.</li>
-                            <li>Built dashboards to improve visibility into system and service performance.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Prometheus</span>
-                            <span class="tech-tag">Grafana</span>
-                            <span class="tech-tag">Terraform</span>
-                            <span class="tech-tag">Ansible</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">AWS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/donaemeka/The-Monitor-Devops-Project" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
-                            <a href="https://github.com/donaemeka/The-Monitor-Devops-Project#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="images/projects/autoscaling-architecture.jpeg" alt="AWS auto scaling architecture diagram">
-                    </div>
-                    <div class="project-content">
-                        <h3>AWS Auto-Scaling Web Application</h3>
-                        <p>Built a multi-AZ auto-scaling web application on AWS using Terraform, an Application Load Balancer, EC2, and CloudWatch to validate dynamic scaling behavior under load.</p>
-                        <ul class="project-highlights">
-                            <li>Created a highly available infrastructure design across multiple Availability Zones.</li>
-                            <li>Validated scale-out and scale-in behavior using monitoring and stress testing.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Terraform</span>
-                            <span class="tech-tag">EC2</span>
-                            <span class="tech-tag">ALB</span>
-                            <span class="tech-tag">CloudWatch</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/donaemeka/aws-auto-scaling-webapp" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
-                            <a href="https://github.com/donaemeka/aws-auto-scaling-webapp#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="images/projects/java-cicd-architecture.png" alt="Java CI/CD pipeline architecture">
-                    </div>
-                    <div class="project-content">
-                        <h3>Java CI/CD Pipeline with SonarQube</h3>
-                        <p>Built a CI/CD pipeline for a Java Spring Boot application using GitHub Actions and SonarQube, with automated deployment to AWS EC2 and integrated code quality checks.</p>
-                        <ul class="project-highlights">
-                            <li>Combined quality gates and deployment automation in one pipeline.</li>
-                            <li>Improved release consistency through repeatable CI/CD workflows.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">GitHub Actions</span>
-                            <span class="tech-tag">SonarQube</span>
-                            <span class="tech-tag">AWS EC2</span>
-                            <span class="tech-tag">CI/CD</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/donaemeka/java-ci-cd-sonarqube-pipeline" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
-                            <a href="https://github.com/donaemeka/java-ci-cd-sonarqube-pipeline#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-section fade-in">
-            <h3>Let’s Connect</h3>
-            <p>I am open to junior DevOps, cloud, IT operations, and infrastructure-focused roles where I can contribute to reliable deployments, automation, and system improvement.</p>
-            <div class="cta-buttons">
-                <a href="mailto:donaemeka92@gmail.com" class="cta-primary"><i class="fas fa-envelope"></i> Contact Me</a>
-                <a href="https://linkedin.com/in/donatus-devops" class="cta-secondary" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Donatus Emeka Anyalebechi. All rights reserved.</p>
-            <p>Open to DevOps, Cloud Engineering, IT Operations, and Infrastructure roles in Germany.</p>
-            <div class="footer-links">
-                <a href="mailto:donaemeka92@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/donatus-devops" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/donaemeka" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const fadeElements = document.querySelectorAll('.fade-in');
-
-        const fadeInOnScroll = () => {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('visible');
-                }
-            });
-        };
-
-        fadeInOnScroll();
-        window.addEventListener('scroll', fadeInOnScroll);
-    </script>
 </body>
 </html>
