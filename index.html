@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Donatus Emeka - DevOps & Cloud Engineer</title>
+=======
+    <title>Donatus Emeka Anyalebechi - DevOps & Cloud Engineer</title>
+>>>>>>> 18f263e (Add azure-ops-platform project and AZ-400 certification)
     <meta name="description" content="Donatus Emeka Anyalebechi - DevOps & Cloud Engineer specializing in AWS, Azure, Kubernetes, Terraform, CI/CD, monitoring, and cloud automation.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -203,10 +207,11 @@
         }
 
         .profile-text h2 {
-            font-size: 1.12rem;
+            font-size: 1.05rem;
             font-weight: 300;
             margin-bottom: 0.9rem;
             opacity: 0.96;
+            line-height: 1.5;
         }
 
         .location {
@@ -359,6 +364,54 @@
             position: absolute;
             left: 0;
             color: var(--secondary);
+        }
+
+        .certifications-section {
+            margin: 3rem 0;
+            color: white;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cert-card {
+            background: var(--surface-dark);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.16);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .cert-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .cert-info h3 {
+            font-size: 1.05rem;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .cert-info p {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
 
         .projects {
@@ -636,7 +689,7 @@
             }
 
             .profile-text h2 {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
 
             .contact-links {
@@ -650,7 +703,8 @@
             }
 
             .projects-grid,
-            .skills-grid {
+            .skills-grid,
+            .cert-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -677,7 +731,11 @@
 
                 <div class="profile-text">
                     <h1>Donatus Emeka Anyalebechi</h1>
+<<<<<<< HEAD
                     <h2>DevOps &amp; Cloud Engineer | AWS Certified Solutions Architect – Associate | AZ-400 DevOps Expert | Kubernetes | Terraform | CI/CD</h2>
+=======
+                    <h2>DevOps &amp; Cloud Engineer | AWS Certified Solutions Architect – Associate | Azure Administrator Associate | Kubernetes | Terraform | CI/CD</h2>
+>>>>>>> 18f263e (Add azure-ops-platform project and AZ-400 certification)
                     <p class="location"><i class="fas fa-map-marker-alt"></i> Duisburg, Germany</p>
 
                     <div class="contact-links">
@@ -693,8 +751,13 @@
     <div class="container">
         <section class="about fade-in">
             <h2 class="section-title">About Me</h2>
+<<<<<<< HEAD
             <p>DevOps &amp; Cloud Engineer with hands-on experience building and automating multi-cloud infrastructure across AWS and Azure, utilizing Kubernetes, Terraform, and advanced CI/CD pipelines.</p>
             <p>I have deployed production-style applications on AWS EKS and Azure, automated delivery with GitHub Actions and Azure DevOps, and built monitoring solutions with Prometheus and Grafana to improve visibility, reliability, and deployment consistency.</p>
+=======
+            <p>DevOps &amp; Cloud Engineer with hands-on experience building and automating cloud infrastructure using AWS, Azure, Kubernetes, Terraform, and CI/CD pipelines.</p>
+            <p>I have deployed production-style applications on AWS EKS, automated delivery with GitHub Actions, and built monitoring solutions with Prometheus and Grafana to improve visibility, reliability, and deployment consistency.</p>
+>>>>>>> 18f263e (Add azure-ops-platform project and AZ-400 certification)
             <p>My focus is on scalable infrastructure, reliable releases, observability, and cloud operations, supported by a practical background in troubleshooting and systems support.</p>
 
             <div class="availability">
@@ -709,8 +772,13 @@
                     <h3>Cloud &amp;<br>Infrastructure</h3>
                     <ul>
                         <li>AWS (EKS, EC2, S3, VPC)</li>
+<<<<<<< HEAD
                         <li>Azure (AKS, VNets, ARM/Bicep)</li>
                         <li>Terraform</li>
+=======
+                        <li>Azure (Admin &amp; Services)</li>
+                        <li>Terraform / OpenTofu</li>
+>>>>>>> 18f263e (Add azure-ops-platform project and AZ-400 certification)
                         <li>Ansible</li>
                     </ul>
                 </div>
@@ -741,8 +809,49 @@
                         <li>Bash</li>
                         <li>Python</li>
                         <li>Linux Administration</li>
-                        <li>Cron Jobs</li>
+                        <li>Git &amp; Version Control</li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="certifications-section fade-in">
+            <h2 class="section-title">Professional Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <h3>AWS Certified Solutions Architect – Associate</h3>
+                        <p>Amazon Web Services (AWS)</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <h3>Azure Administrator Associate (AZ-104)</h3>
+                        <p>Microsoft Certified</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <h3>SAP S/4HANA TS410</h3>
+                        <p>Brandenburg University of Applied Sciences</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <h3>Google IT Support Professional Certificate</h3>
+                        <p>Google / Coursera</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <h3>Introduction to Linux (LFS101)</h3>
+                        <p>The Linux Foundation</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -914,14 +1023,49 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="images/projects/autoscaling-architecture.jpeg" alt="AWS Auto Scaling and High Availability Architecture">
+                    </div>
+                    <div class="project-content">
+                        <h3>AWS Auto Scaling &amp; High Availability Architecture</h3>
+                        <p>Designed and implemented a fault-tolerant, highly available infrastructure setup on AWS utilizing Auto Scaling Groups, Application Load Balancers, and Multi-AZ VPC deployment.</p>
+                        <ul class="project-highlights">
+                            <li>Ensured high availability and seamless traffic distribution under varying workloads.</li>
+                            <li>Automated infrastructure recovery and scaling rules to maintain reliable uptime.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS EC2</span>
+                            <span class="tech-tag">Auto Scaling</span>
+                            <span class="tech-tag">ALB</span>
+                            <span class="tech-tag">VPC</span>
+                            <span class="tech-tag">Terraform</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+>>>>>>> 18f263e (Add azure-ops-platform project and AZ-400 certification)
             </div>
         </section>
 
         <section class="cta-section fade-in">
+<<<<<<< HEAD
             <h3>Let's Build Something Together</h3>
             <p>I am actively looking for junior or entry-level Cloud, DevOps, and Platform Engineering roles across the EU and Germany. Get in touch if you'd like to talk!</p>
             <div class="cta-buttons">
                 <a href="mailto:donaemeka92@gmail.com" class="cta-primary"><i class="fas fa-envelope"></i> Send an Email</a>
+=======
+            <h3>Let's Build Something Reliable Together</h3>
+            <p>I am actively looking for junior or entry-level DevOps, Cloud, and Infrastructure roles where I can contribute my skills in AWS, Azure, Kubernetes, Terraform, and CI/CD automation.</p>
+            <div class="cta-buttons">
+                <a href="mailto:donaemeka92@gmail.com" class="cta-primary"><i class="fas fa-paper-plane"></i> Get in Touch</a>
+>>>>>>> 18f263e (Add azure-ops-platform project and AZ-400 certification)
                 <a href="https://linkedin.com/in/donatus-devops" target="_blank" rel="noopener noreferrer" class="cta-secondary"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
             </div>
         </section>
@@ -930,6 +1074,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Donatus Emeka Anyalebechi. All rights reserved.</p>
+<<<<<<< HEAD
             <p>DevOps &amp; Cloud Engineer</p>
             <div class="footer-links">
                 <a href="https://github.com/donaemeka" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
@@ -938,5 +1083,39 @@
             </div>
         </div>
     </footer>
+=======
+            <p>DevOps &amp; Cloud Engineer | Duisburg, Germany</p>
+            <div class="footer-links">
+                <a href="mailto:donaemeka92@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/donatus-devops" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/donaemeka" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll fade-in observer animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+>>>>>>> 18f263e (Add azure-ops-platform project and AZ-400 certification)
 </body>
 </html>
