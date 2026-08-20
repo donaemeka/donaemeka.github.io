@@ -191,7 +191,6 @@ cat << 'EOF' > index.html
             border-radius: 2px;
         }
 
-        /* About Me Professional Card Layout */
         .about {
             padding: 4rem 0 2rem;
             color: white;
@@ -395,24 +394,24 @@ cat << 'EOF' > index.html
         .project-card h3 {
             color: var(--primary);
             margin-bottom: 0.8rem;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
         }
 
         .project-card p {
             color: var(--text-light);
             margin-bottom: 1rem;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             line-height: 1.6;
         }
 
         .project-highlights {
             margin: 0 0 1rem 1rem;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
         }
 
         .project-highlights li {
             color: var(--text);
-            margin-bottom: 0.35s;
+            margin-bottom: 0.35rem;
         }
 
         .project-tech {
@@ -669,9 +668,10 @@ cat << 'EOF' > index.html
             </p>
 
             <div class="projects-grid">
+                <!-- Project 1: Azure Ops Platform -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/projects/azure-ops-platform.png" alt="Azure Ops Platform Architecture" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\' viewBox=\'0 0 400 250\'%3E%3Crect fill=\'%23f1f5f9\' width=\'400\' height=\'250\'/%3E%3Ctext fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'15\' dy=\'10\' text-anchor=\'middle\' x=\'200\' y=\'125\'%3EAzure Ops Platform Architecture%3C/text%3E%3C/svg%3E'">
+                        <img src="images/projects/azure-ops-platform.png" alt="Azure Ops Platform Architecture" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\' viewBox=\'0 0 400 250\'%3E%3Crect fill=\'%23f1f5f9\' width=\'400\' height=\'250\'/%3E%3Ctext fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'15\' dy=\'10\' text-anchor=\'middle\' x=\'200\' y=\'125\'%3EAzure Ops Architecture%3C/text%3E%3C/svg%3E'">
                     </div>
                     <div class="project-content">
                         <h3>Azure Ops Platform — Production Infrastructure</h3>
@@ -695,6 +695,7 @@ cat << 'EOF' > index.html
                     </div>
                 </div>
 
+                <!-- Project 2: SaaS Microservices Platform -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="images/projects/saas-eks-architecture.png" alt="SaaS microservices platform architecture" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\' viewBox=\'0 0 400 250\'%3E%3Crect fill=\'%23f1f5f9\' width=\'400\' height=\'250\'/%3E%3Ctext fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'15\' dy=\'10\' text-anchor=\'middle\' x=\'200\' y=\'125\'%3ESaaS EKS Architecture%3C/text%3E%3C/svg%3E'">
@@ -720,6 +721,7 @@ cat << 'EOF' > index.html
                     </div>
                 </div>
 
+                <!-- Project 3: Expensy -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="images/projects/expensy-architecture.png" alt="Expensy architecture" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\' viewBox=\'0 0 400 250\'%3E%3Crect fill=\'%23f1f5f9\' width=\'400\' height=\'250\'/%3E%3Ctext fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'15\' dy=\'10\' text-anchor=\'middle\' x=\'200\' y=\'125\'%3EExpensy Architecture%3C/text%3E%3C/svg%3E'">
@@ -740,6 +742,32 @@ cat << 'EOF' > index.html
                         <div class="project-links">
                             <a href="https://github.com/donaemeka/expensy-devops-eks-deployment" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
                             <a href="https://github.com/donaemeka/expensy-devops-eks-deployment#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Restauranty / The Monitor -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projects/restauranty-architecture.png" alt="Restauranty architecture" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\' viewBox=\'0 0 400 250\'%3E%3Crect fill=\'%23f1f5f9\' width=\'400\' height=\'250\'/%3E%3Ctext fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'15\' dy=\'10\' text-anchor=\'middle\' x=\'200\' y=\'125\'%3ERestauranty / Monitor Arch%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="project-content">
+                        <h3>Restauranty — Full-Stack Microservices Platform</h3>
+                        <p>Developed a containerized microservices platform utilizing React, Node.js, and MongoDB services deployed on Kubernetes with NGINX Ingress and Prometheus/Grafana monitoring.</p>
+                        <ul class="project-highlights">
+                            <li>Implemented ingress controllers and persistent storage for multi-tier microservices.</li>
+                            <li>Configured comprehensive application and cluster performance metrics collection.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">NGINX</span>
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">Grafana</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
                         </div>
                     </div>
                 </div>
