@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donatus Emeka - DevOps & Cloud Engineer</title>
-    <meta name="description" content="Donatus Emeka Anyalebechi - DevOps & Cloud Engineer specializing in AWS, Kubernetes, Terraform, CI/CD, monitoring, and cloud automation.">
+    <meta name="description" content="Donatus Emeka Anyalebechi - DevOps & Cloud Engineer specializing in AWS, Azure, Kubernetes, Terraform, CI/CD, monitoring, and cloud automation.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BT1KYJ66JX"></script>
@@ -157,7 +157,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background:
+            background: 
                 radial-gradient(circle at 20% 80%, rgba(255,255,255,0.10) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(255,255,255,0.10) 0%, transparent 50%);
             z-index: 1;
@@ -677,7 +677,7 @@
 
                 <div class="profile-text">
                     <h1>Donatus Emeka Anyalebechi</h1>
-                    <h2>DevOps &amp; Cloud Engineer | AWS Certified Solutions Architect – Associate | Kubernetes | Terraform | CI/CD | Monitoring</h2>
+                    <h2>DevOps &amp; Cloud Engineer | AWS Certified Solutions Architect – Associate | AZ-400 DevOps Expert | Kubernetes | Terraform | CI/CD</h2>
                     <p class="location"><i class="fas fa-map-marker-alt"></i> Duisburg, Germany</p>
 
                     <div class="contact-links">
@@ -693,8 +693,8 @@
     <div class="container">
         <section class="about fade-in">
             <h2 class="section-title">About Me</h2>
-            <p>DevOps &amp; Cloud Engineer with hands-on experience building and automating cloud infrastructure using AWS, Kubernetes, Terraform, and CI/CD pipelines.</p>
-            <p>I have deployed production-style applications on AWS EKS, automated delivery with GitHub Actions, and built monitoring solutions with Prometheus and Grafana to improve visibility, reliability, and deployment consistency.</p>
+            <p>DevOps &amp; Cloud Engineer with hands-on experience building and automating multi-cloud infrastructure across AWS and Azure, utilizing Kubernetes, Terraform, and advanced CI/CD pipelines.</p>
+            <p>I have deployed production-style applications on AWS EKS and Azure, automated delivery with GitHub Actions and Azure DevOps, and built monitoring solutions with Prometheus and Grafana to improve visibility, reliability, and deployment consistency.</p>
             <p>My focus is on scalable infrastructure, reliable releases, observability, and cloud operations, supported by a practical background in troubleshooting and systems support.</p>
 
             <div class="availability">
@@ -709,9 +709,9 @@
                     <h3>Cloud &amp;<br>Infrastructure</h3>
                     <ul>
                         <li>AWS (EKS, EC2, S3, VPC)</li>
+                        <li>Azure (AKS, VNets, ARM/Bicep)</li>
                         <li>Terraform</li>
                         <li>Ansible</li>
-                        <li>Azure (basic)</li>
                     </ul>
                 </div>
 
@@ -719,9 +719,9 @@
                     <h3>CI/CD &amp;<br>Monitoring</h3>
                     <ul>
                         <li>GitHub Actions</li>
+                        <li>Azure DevOps / Pipelines</li>
                         <li>Prometheus</li>
                         <li>Grafana</li>
-                        <li>SonarQube</li>
                     </ul>
                 </div>
 
@@ -750,10 +750,37 @@
         <section class="projects">
             <h2 class="section-title">Featured DevOps Projects</h2>
             <p class="projects-intro">
-                A focused selection of DevOps and cloud projects covering Kubernetes, CI/CD, infrastructure automation, observability, and production-style deployments on AWS.
+                A focused selection of DevOps and cloud projects covering multi-cloud deployments (AWS & Azure), Kubernetes, CI/CD, infrastructure automation, and production-grade observability.
             </p>
 
             <div class="projects-grid">
+                <!-- Newly added azure-ops-platform project -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="images/projects/azure-ops-architecture.png" alt="Azure Ops Platform Architecture">
+                    </div>
+                    <div class="project-content">
+                        <h3>Azure Ops Platform — Production Infrastructure</h3>
+                        <p>Designed and built a production-style Azure infrastructure environment covering robust networking, compute, storage, AKS clustering, automated CI/CD pipelines, and secure security controls.</p>
+                        <ul class="project-highlights">
+                            <li>Implemented scalable infrastructure components across Azure resources using automated configurations.</li>
+                            <li>Integrated robust security practices and monitoring solutions for high availability.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">AKS</span>
+                            <span class="tech-tag">Bicep</span>
+                            <span class="tech-tag">CI/CD</span>
+                            <span class="tech-tag">Monitoring</span>
+                            <span class="tech-tag">Cloud Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka/azure-ops-platform" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka/azure-ops-platform#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-card fade-in">
                     <div class="project-image">
                         <img src="images/projects/saas-eks-architecture.png" alt="SaaS microservices platform on AWS EKS architecture">
@@ -887,65 +914,15 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="images/projects/autoscaling-architecture.jpeg" alt="AWS auto scaling architecture diagram">
-                    </div>
-                    <div class="project-content">
-                        <h3>AWS Auto-Scaling Web Application</h3>
-                        <p>Built a multi-AZ auto-scaling web application on AWS using Terraform, an Application Load Balancer, EC2, and CloudWatch to validate dynamic scaling behavior under load.</p>
-                        <ul class="project-highlights">
-                            <li>Created a highly available infrastructure design across multiple Availability Zones.</li>
-                            <li>Validated scale-out and scale-in behavior using monitoring and stress testing.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Terraform</span>
-                            <span class="tech-tag">EC2</span>
-                            <span class="tech-tag">ALB</span>
-                            <span class="tech-tag">CloudWatch</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/donaemeka/aws-auto-scaling-webapp" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
-                            <a href="https://github.com/donaemeka/aws-auto-scaling-webapp#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="images/projects/java-cicd-architecture.png" alt="Java CI/CD pipeline architecture">
-                    </div>
-                    <div class="project-content">
-                        <h3>Java CI/CD Pipeline with SonarQube</h3>
-                        <p>Built a CI/CD pipeline for a Java Spring Boot application using GitHub Actions and SonarQube, with automated deployment to AWS EC2 and integrated code quality checks.</p>
-                        <ul class="project-highlights">
-                            <li>Combined quality gates and deployment automation in one pipeline.</li>
-                            <li>Improved release consistency through repeatable CI/CD workflows.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">GitHub Actions</span>
-                            <span class="tech-tag">SonarQube</span>
-                            <span class="tech-tag">AWS EC2</span>
-                            <span class="tech-tag">CI/CD</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/donaemeka/java-ci-cd-sonarqube-pipeline" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
-                            <a href="https://github.com/donaemeka/java-ci-cd-sonarqube-pipeline#readme" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section class="cta-section fade-in">
-            <h3>Let’s Connect</h3>
-            <p>I am open to DevOps, cloud, IT operations, and infrastructure-focused roles where I can contribute to reliable deployments, automation, and system improvement.</p>
+            <h3>Let's Build Something Together</h3>
+            <p>I am actively looking for junior or entry-level Cloud, DevOps, and Platform Engineering roles across the EU and Germany. Get in touch if you'd like to talk!</p>
             <div class="cta-buttons">
-                <a href="mailto:donaemeka92@gmail.com" class="cta-primary"><i class="fas fa-envelope"></i> Contact Me</a>
-                <a href="https://linkedin.com/in/donatus-devops" class="cta-secondary" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
+                <a href="mailto:donaemeka92@gmail.com" class="cta-primary"><i class="fas fa-envelope"></i> Send an Email</a>
+                <a href="https://linkedin.com/in/donatus-devops" target="_blank" rel="noopener noreferrer" class="cta-secondary"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
             </div>
         </section>
     </div>
@@ -953,31 +930,13 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Donatus Emeka Anyalebechi. All rights reserved.</p>
-            <p>Open to DevOps, Cloud Engineering, IT Operations, and Infrastructure roles in EU and Germany (open to relocation).</p>
+            <p>DevOps &amp; Cloud Engineer</p>
             <div class="footer-links">
-                <a href="mailto:donaemeka92@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/donatus-devops" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/donaemeka" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/donatus-devops" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:donaemeka92@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
-
-    <script>
-        const fadeElements = document.querySelectorAll('.fade-in');
-
-        const fadeInOnScroll = () => {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('visible');
-                }
-            });
-        };
-
-        fadeInOnScroll();
-        window.addEventListener('scroll', fadeInOnScroll);
-    </script>
 </body>
 </html>
