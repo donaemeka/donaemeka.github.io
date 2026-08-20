@@ -664,14 +664,14 @@ cat << 'EOF' > index.html
         <section class="projects">
             <h2 class="section-title">Featured DevOps Projects</h2>
             <p class="projects-intro">
-                A focused selection of DevOps and cloud projects covering multi-cloud deployments (AWS & Azure), Kubernetes, CI/CD, infrastructure automation, and production-grade observability.
+                A comprehensive showcase of production-grade DevOps projects covering multi-cloud deployments (AWS & Azure), Kubernetes orchestration, automated CI/CD pipelines, and infrastructure observability.
             </p>
 
             <div class="projects-grid">
-                <!-- Project 1: Azure Ops Platform -->
+                <!-- 1. Azure Ops Platform -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/projects/azure-ops-platform.png" alt="Azure Ops Platform Architecture" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\' viewBox=\'0 0 400 250\'%3E%3Crect fill=\'%23f1f5f9\' width=\'400\' height=\'250\'/%3E%3Ctext fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'15\' dy=\'10\' text-anchor=\'middle\' x=\'200\' y=\'125\'%3EAzure Ops Architecture%3C/text%3E%3C/svg%3E'">
+                        <img src="images/projects/azure-ops-architecture.png" alt="Azure Ops Platform Architecture">
                     </div>
                     <div class="project-content">
                         <h3>Azure Ops Platform — Production Infrastructure</h3>
@@ -686,7 +686,6 @@ cat << 'EOF' > index.html
                             <span class="tech-tag">Bicep</span>
                             <span class="tech-tag">CI/CD</span>
                             <span class="tech-tag">Monitoring</span>
-                            <span class="tech-tag">Cloud Security</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/donaemeka" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
@@ -695,16 +694,16 @@ cat << 'EOF' > index.html
                     </div>
                 </div>
 
-                <!-- Project 2: SaaS Microservices Platform -->
+                <!-- 2. SaaS Microservices Platform -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/projects/saas-eks-architecture.png" alt="SaaS microservices platform architecture" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\' viewBox=\'0 0 400 250\'%3E%3Crect fill=\'%23f1f5f9\' width=\'400\' height=\'250\'/%3E%3Ctext fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'15\' dy=\'10\' text-anchor=\'middle\' x=\'200\' y=\'125\'%3ESaaS EKS Architecture%3C/text%3E%3C/svg%3E'">
+                        <img src="images/projects/saas-eks-architecture.png" alt="SaaS EKS Architecture">
                     </div>
                     <div class="project-content">
                         <h3>SaaS Microservices Platform on AWS EKS</h3>
                         <p>Built and deployed a production-style microservices platform on AWS EKS using Terraform, Kubernetes, Docker, and GitHub Actions.</p>
                         <ul class="project-highlights">
-                            <li>Automated delivery with GitHub Actions, reducing deployment time from ~2 hours to ~2 minutes.</li>
+                            <li>Automated delivery with GitHub Actions, reducing deployment time significantly.</li>
                             <li>Improved reliability by resolving pod scheduling, storage, and service communication issues.</li>
                         </ul>
                         <div class="project-tech">
@@ -721,10 +720,10 @@ cat << 'EOF' > index.html
                     </div>
                 </div>
 
-                <!-- Project 3: Expensy -->
+                <!-- 3. Expensy -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/projects/expensy-architecture.png" alt="Expensy architecture" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\' viewBox=\'0 0 400 250\'%3E%3Crect fill=\'%23f1f5f9\' width=\'400\' height=\'250\'/%3E%3Ctext fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'15\' dy=\'10\' text-anchor=\'middle\' x=\'200\' y=\'125\'%3EExpensy Architecture%3C/text%3E%3C/svg%3E'">
+                        <img src="images/projects/expensy-architecture.png" alt="Expensy Architecture">
                     </div>
                     <div class="project-content">
                         <h3>Expensy — DevOps Deployment on AWS EKS</h3>
@@ -746,10 +745,10 @@ cat << 'EOF' > index.html
                     </div>
                 </div>
 
-                <!-- Project 4: Restauranty / The Monitor -->
+                <!-- 4. Restauranty -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/projects/restauranty-architecture.png" alt="Restauranty architecture" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\' viewBox=\'0 0 400 250\'%3E%3Crect fill=\'%23f1f5f9\' width=\'400\' height=\'250\'/%3E%3Ctext fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'15\' dy=\'10\' text-anchor=\'middle\' x=\'200\' y=\'125\'%3ERestauranty / Monitor Arch%3C/text%3E%3C/svg%3E'">
+                        <img src="images/projects/restauranty-architecture.png" alt="Restauranty Architecture">
                     </div>
                     <div class="project-content">
                         <h3>Restauranty — Full-Stack Microservices Platform</h3>
@@ -764,6 +763,108 @@ cat << 'EOF' > index.html
                             <span class="tech-tag">NGINX</span>
                             <span class="tech-tag">Prometheus</span>
                             <span class="tech-tag">Grafana</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. The Monitor -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projects/monitor-architecture.png" alt="The Monitor Architecture">
+                    </div>
+                    <div class="project-content">
+                        <h3>The Monitor — Infrastructure Monitoring Stack</h3>
+                        <p>Automated infrastructure monitoring stack provisioning AWS resources with Terraform, configuring servers via Ansible, and deploying Prometheus and Grafana via Docker Compose.</p>
+                        <ul class="project-highlights">
+                            <li>Provisioned cloud infrastructure and configured automated server hardening.</li>
+                            <li>Set up robust metrics collection and alerting dashboards for system observability.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Ansible</span>
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">Grafana</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Real-Time Voting App -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projects/voting-architecture.png" alt="Voting App Architecture">
+                    </div>
+                    <div class="project-content">
+                        <h3>Multi-Service Real-Time Voting Application</h3>
+                        <p>Built and deployed a multi-service real-time voting application on Amazon EKS using Python, Node.js, .NET, Docker, and GitHub Actions CI/CD pipelines.</p>
+                        <ul class="project-highlights">
+                            <li>Orchestrated polyglot microservices communicating seamlessly in a clustered environment.</li>
+                            <li>Automated build and deployment workflows via GitHub Actions CI/CD.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS EKS</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Java CI/CD Pipeline -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projects/java-cicd-architecture.png" alt="Java CI/CD Architecture">
+                    </div>
+                    <div class="project-content">
+                        <h3>Java CI/CD Automated Pipeline</h3>
+                        <p>Engineered an automated end-to-end CI/CD delivery pipeline specifically optimized for Java microservices, ensuring rigorous build verification and automated artifact publishing.</p>
+                        <ul class="project-highlights">
+                            <li>Automated unit testing, static code analysis, and container image building.</li>
+                            <li>Streamlined deployment processes to staging and production clusters.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">CI/CD</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/donaemeka" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/donaemeka" class="details-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Autoscaling Infrastructure -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projects/autoscaling-architecture.jpeg" alt="Autoscaling Architecture">
+                    </div>
+                    <div class="project-content">
+                        <h3>Cloud Auto-Scaling Infrastructure Stack</h3>
+                        <p>Configured resilient, auto-scaling cloud compute architecture designed to dynamically handle traffic spikes and optimize cloud resource expenditure.</p>
+                        <ul class="project-highlights">
+                            <li>Implemented load balancing and automated instance scaling rules.</li>
+                            <li>Monitored performance thresholds to ensure zero downtime during high loads.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Auto-Scaling</span>
+                            <span class="tech-tag">CloudWatch</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/donaemeka" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
